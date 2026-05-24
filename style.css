@@ -1,0 +1,336 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    transition: background 0.8s ease-in-out; 
+    overflow-x: hidden;
+    color: #e2e8f0;
+    padding: 20px 0;
+}
+
+/* Glassmorphism Card Effect */
+.glass-effect {
+    background: rgba(15, 23, 42, 0.4);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 40px;
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    color: #fff;
+    text-shadow: 0 4px 6px rgba(0,0,0,0.4);
+    transition: all 0.5s ease;
+}
+
+/* ==========================================
+   NEW: JAB 30 JUNE AAYEGI - CURSIVE & BOLD STYLE
+   ========================================== */
+.birthday-cursive-bold {
+    font-family: 'Brush Script MT', 'Great Vibes', 'Lucida Handwriting', cursive !important;
+    font-weight: bold !important;
+    font-size: 4rem !important; /* Thoda bada size */
+    color: #38bdf8 !important; /* Glowing blue color */
+    text-shadow: 0 0 20px rgba(56, 189, 248, 0.8) !important;
+    animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.03); }
+}
+
+/* NEW: POORI WEBSITE MEIN NAAM FLOAT KARNE KE LIYE */
+.floating-name {
+    position: fixed;
+    color: rgba(56, 189, 248, 0.15); /* Translucent Neon Blue */
+    font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
+    font-weight: bold;
+    pointer-events: none; /* Takraaye na buttons se */
+    z-index: -1; /* Background ke piche rahega */
+    animation: floatAnimation 10s infinite linear;
+}
+
+@keyframes floatAnimation {
+    0% { transform: translateY(0) scale(0.8); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(-100vh) scale(1.2); opacity: 0; }
+}
+
+header p {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    color: #cbd5e1;
+    font-weight: 500;
+}
+
+/* Countdown Styling */
+.countdown-wrapper {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.time-box {
+    background: rgba(30, 41, 59, 0.6);
+    padding: 20px 15px;
+    border-radius: 15px;
+    min-width: 100px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.2), 0 4px 15px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.time-box span {
+    font-size: 3rem;
+    font-weight: bold;
+    display: block;
+    color: #38bdf8;
+}
+
+.time-box p {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 5px;
+    color: #94a3b8;
+}
+
+/* Buttons Styling */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background: rgba(30, 41, 59, 0.8);
+    color: #38bdf8;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background: rgba(56, 189, 248, 0.1);
+    box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4);
+}
+
+/* Image Upload & Gallery Styling */
+#image-upload-section {
+    margin-top: 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 30px;
+}
+
+#image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+#image-gallery img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#image-gallery img:hover {
+    transform: scale(1.05);
+    border-color: rgba(56, 189, 248, 0.6);
+}
+
+#image-input {
+    display: none; 
+}
+
+/* Wishes Box Styling */
+#wishes-section {
+    margin-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 30px;
+}
+
+#wishes-section h2 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.wish-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.input-glass {
+    background: rgba(30, 41, 59, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px 15px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-glass:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+}
+
+.input-glass::placeholder {
+    color: #94a3b8;
+}
+
+#wishes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-height: 250px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+#wishes-container::-webkit-scrollbar {
+    width: 6px;
+}
+#wishes-container::-webkit-scrollbar-thumb {
+    background: rgba(56, 189, 248, 0.5);
+    border-radius: 10px;
+}
+
+/* DELETE (CROSS) BUTTON STYLING */
+.wish-card {
+    position: relative; 
+}
+
+.img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 150px;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.img-wrapper:hover img {
+    transform: scale(1.05);
+    border-color: rgba(56, 189, 248, 0.6);
+}
+
+.delete-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #ef4444; 
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    display: none; 
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    z-index: 10;
+}
+
+.wish-card:hover .delete-btn, 
+.img-wrapper:hover .delete-btn {
+    display: flex;
+}
+
+.delete-btn:hover {
+    background: #dc2626;
+    transform: scale(1.1);
+}
+
+.wish-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 4px solid #38bdf8;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.wish-card h4 {
+    color: #38bdf8;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.wish-card p {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .countdown-wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .time-box {
+        min-width: 45%;
+        margin-bottom: 10px;
+    }
+    .controls {
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn {
+        width: 100%;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+}

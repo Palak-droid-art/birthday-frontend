@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Glass Birthday Countdown</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class="container glass-effect">
+        <header>
+            <h1>Countdown to the Big Day! 🎂</h1>
+            <p>June 30th is coming fast...</p>
+        </header>
+
+        <div id="countdown" class="countdown-wrapper">
+            <div class="time-box">
+                <span id="days">00</span>
+                <p>Days</p>
+            </div>
+            <div class="time-box">
+                <span id="hours">00</span>
+                <p>Hours</p>
+            </div>
+            <div class="time-box">
+                <span id="minutes">00</span>
+                <p>Minutes</p>
+            </div>
+            <div class="time-box">
+                <span id="seconds">00</span>
+                <p>Seconds</p>
+            </div>
+        </div>
+
+        <div class="controls" style="flex-direction: column; align-items: center; gap: 15px;">
+            <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+                <button id="color-btn" class="btn">🎨 Change Dark Theme</button>
+                <button id="music-btn" class="btn">🎵 Play Music</button>
+            </div>
+            
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 5px;">
+                <input type="text" id="yt-link" placeholder="Paste YouTube Link here..." class="input-glass" style="width: 250px; font-size: 0.9rem; padding: 10px;">
+                <button id="change-music-btn" class="btn" style="padding: 10px 15px; font-size: 0.9rem;">🔄 Set Song</button>
+            </div>
+        </div>
+        
+        <div id="youtube-player" style="display: none;"></div>
+
+        <div id="image-upload-section">
+            <h2>Our Memories 📸</h2>
+            <div class="controls" style="margin-top: 15px;">
+                <input type="file" id="image-input" accept="image/*" multiple>
+                <button id="add-image-btn" class="btn" style="color: #fff; border-color: rgba(255,255,255,0.3);">➕ Add Images</button>
+            </div>
+            <div id="image-gallery">
+                </div>
+        </div>
+
+        <div id="wishes-section">
+            <h2>Birthday Wishes 📝</h2>
+            
+            <div style="text-align: center; margin-bottom: 20px;">
+                <a href="https://api.whatsapp.com/send?text=Hey! Himanshi ka birthday aa raha hai. Is link par click karke uske liye apni special wishes aur photos add karo: [WEBSITE_LINK]" target="_blank" class="btn" style="background: #25D366; color: white; text-decoration: none; display: inline-block; border-color: #25D366;">📱 Share on WhatsApp</a>
+            </div>
+
+            <div class="wish-form">
+                <input type="text" id="wish-name" placeholder="Your Name" class="input-glass">
+                <textarea id="wish-text" placeholder="Write your special birthday wish here..." rows="3" class="input-glass"></textarea>
+                <button id="add-wish-btn" class="btn">✨ Send Wish</button>
+            </div>
+            
+            <div id="wishes-container">
+                </div>
+        </div>
+        <script src="js/script.js"></script> 
+</body>
+</html>
